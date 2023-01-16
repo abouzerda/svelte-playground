@@ -2,13 +2,13 @@
 	"name": "playground",
 	"version": "0.0.1",
 	"private": true,
-	"main": "server.js",
+	"main": "index.js",
 	"scripts": {
-		"start": "node server.js",
+		"start": "node index.js",
 		"dev": "vite dev",
 		"_prebuild": "rm -rf client/ server/ env.js handler.js index.js",
-		"_build": "vite build",
-		"_postbuild": "cp -a build/. . && cat /var/task/package.json",
+		"build": "vite build",
+		"_postbuild": "cp -a build/. . && npm pkg delete type",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
