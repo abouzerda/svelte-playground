@@ -2,11 +2,11 @@
 	"name": "playground",
 	"version": "0.0.1",
 	"private": true,
-	  "main": "server.js",
+	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
 		"dev": "vite dev",
-		"_prebuild":"rm -rf client/ server/ env.js handler.js index.js",
+		"_prebuild": "rm -rf client/ server/ env.js handler.js index.js",
 		"_build": "vite build",
 		"_postbuild": "cp -a build/. . && cat /var/task/package.json",
 		"preview": "vite preview",
@@ -24,7 +24,7 @@
 		"vite": "^4.0.0"
 	},
 	"dependencies": {
-		"express": "^4.17.1"
+		"express": "^4.18.2"
 	},
 	"type": "module"
 }
