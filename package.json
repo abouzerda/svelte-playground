@@ -7,7 +7,7 @@
 		"dev": "vite dev",
 		"prebuild":"rm -rf client/ server/ env.js handler.js index.js",
 		"build": "vite build",
-		"postbuild": "cp -a build/. .",
+		"postbuild": "cp -a build/. . && cp package.json /var/task/",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
