@@ -3,9 +3,10 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node build",
 		"dev": "vite dev",
+		"prebuild":"rm -rf client/ server/ env.js handler.js index.js",
 		"build": "vite build",
+		"postbuild": "cp -a build/. .",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
