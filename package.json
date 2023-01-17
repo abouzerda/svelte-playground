@@ -6,9 +6,9 @@
 	"scripts": {
 		"start": "node index.js",
 		"dev": "vite dev",
-		"_prebuild": "rm -rf client/ server/ env.js handler.js index.js",
+		"prebuild": "rm -rf client/ server/ env.js handler.js index.js && npm install -g npm@latest && npm install",
 		"build": "vite build",
-		"_postbuild": "cp -a build/. .",
+		"postbuild": "cp -a build/. .",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
