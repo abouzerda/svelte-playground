@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node index.js",
 		"dev": "vite dev",
-		"prebuild": "rm -rf client/ server/ env.js handler.js index.js && npm install -g npm@latest && npm install",
+		"prebuild": "rm -rf client/ server/ env.js handler.js index.js && npm ci",
 		"build": "vite build",
 		"postbuild": "cp -a build/. .",
 		"preview": "vite preview",
